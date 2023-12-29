@@ -1,0 +1,180 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.4s ease; /* Add transition for smooth color change */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.4s ease; /* Add transition for smooth color change */
+}
+
+/* Light mode */
+.social-media-dashboard,
+.total-followers {
+  color: #000;
+}
+
+/* Dark mode */
+body.dark-theme {
+  background-color: #222; /* Black background for dark theme */
+  color: #fff; /* White text for dark theme */
+}
+
+body.dark-theme .header {
+  background-color: #222; /* Override header background for dark theme */
+}
+
+body.dark-theme .social-media-dashboard,
+body.dark-theme .total-followers {
+  color: #fff; /* Adjust text color for dark theme */
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #9fccfa;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 2em;
+  inset: 0;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.switch input:checked + .slider {
+  background: #0974f1;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.6em);
+}
+
+/* New styles for the Facebook card */
+.cards-container{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px;
+}
+.main-card {
+  margin:8px;
+  width: 300px;
+  height: 250px;
+  padding: 15px;
+  background-color: #B7D6FB;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main-frame {
+  position: absolute;
+  border-radius: 10px;
+  background-color: #add8e6;
+  width: 100%;
+  height: 70%;
+}
+
+.facebook-logo-icon {
+  position: absolute;
+  width: 20%;
+  top: 10%;
+  left: 10%;
+}
+
+.ike-did {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  font-weight: 300;
+}
+
+.k {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  font-size: 20px;
+}
+
+.followers {
+  position: absolute;
+  top: 160px;
+  left: 80px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background-color: #57a5ed;
+  width: 100%;
+  height: 5px;
+}
+
+.up-sign-icon {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.today {
+  position: absolute;
+  top: 200px;
+  left: 80px;
+  color: #00ff00;
+  font-size: 12px;
+}
+
+.second-card {
+  margin:8px;
+  width: 300px;
+  padding: 15px;
+  height: 150px;
+  background-color: #B7D6FB;
+  border-radius: 10px;
+  overflow: hidden;
+}

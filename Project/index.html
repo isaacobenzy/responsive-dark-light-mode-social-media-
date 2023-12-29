@@ -1,31 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Project</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap" />
 </head>
 <body>
-    <nav class="nav">
-        <div class="header">
-            <h1>Social Media Dashboard</h1>
-            <div class="toggle-switch">
-                <label class="switch-label">
-                    <input type="checkbox" class="checkbox" id="darkModeToggle">
-                    <span class="slider"></span>
-                </label>
-            </div>
+  <div class="dark-theme-before-toggle">
+    <div class="header">
+      <div>
+        <h1 class="social-media-dashboard">Social Media Dashboard</h1>
+        <p class="total-followers">Total followers: 20,344</p>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+      </div>
+      <div>
+        <div class="cards-container">
+          <div class="main-card">
+              <!-- Facebook Card Content -->
+          </div>
+          
+          <div class="main-card">
+              <!-- YouTube Card Content -->
+          </div>
+          
+          <div class="main-card">
+              <!-- Instagram Card Content -->
+          </div>
+          
+          <div class="main-card">
+              <!-- Twitter Card Content -->
+          </div>
+          
+          <!-- Add other social media cards as needed -->
+  
         </div>
-        <p>Total Followers 23,004</p>
-   
- <main class="container">
-    <div class="facebook"></div>
-    <div class="twitter"></div>
-    <div class="instagram"></div>
-    <div class="youtube"></div>
- </main>
-</nav>
-    <script src="script.js"></script>
+      <div class="overview-today">Overview-Today</div>
+      <div class="cards-container">
+      <div class="second-card">
+        <!-- Facebook Views Content -->
+    </div>
+    
+    <div class="second-card">
+        <!-- Facebook Likes Content -->
+    </div>
+    
+    <div class="second-card">
+        <!-- Twitter Likes Content -->
+    </div>
+    
+    <div class="second-card">
+        <!-- Retweets Content -->
+    </div>
+    </div>
+    <div class="cards-container">
+    <div class="second-card">
+        <!-- Instagram Likes Content -->
+    </div>
+    
+    <div class="second-card">
+        <!-- YouTube Likes Content -->
+    </div>
+    
+    <div class="second-card">
+        <!-- YouTube Views Content -->
+    </div>
+    
+    <div class="second-card">
+        <!-- Instagram Views Content -->
+    </div>
+</div>
+</div>
+      </div>
+    </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

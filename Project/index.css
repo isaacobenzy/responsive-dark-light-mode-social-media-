@@ -1,0 +1,228 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.4s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.4s ease;
+}
+
+/* Light mode */
+.social-media-dashboard,
+.total-followers {
+  color: #000;
+}
+
+.main-card,
+.second-card {
+  background-color: #a1c3ec;
+}
+
+/* Dark mode */
+body.dark-theme {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-theme .header {
+  background-color: #222;
+}
+
+body.dark-theme .social-media-dashboard,
+body.dark-theme .total-followers {
+  color: #fff;
+}
+
+body.dark-theme .main-card,
+body.dark-theme .second-card {
+  background-color: rgb(48, 48, 85);
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #9fccfa;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 2em;
+  inset: 0;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.switch input:checked + .slider {
+  background: #0974f1;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.6em);
+}
+
+/* New styles for the Facebook card */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px;
+  /* Allow cards to wrap to the next line on smaller screens */
+}
+
+.main-card {
+  justify-content: center;
+  align-content: center;
+  margin: 8px;
+  height: 220px;
+  width: 280px; /* Adjusted for responsiveness */
+  max-width: 350px; /* Added max-width to prevent cards from becoming too wide */
+  background-color: #b7d6fb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.second-card {
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  height: 130px;
+  width: 280px; /* Adjusted for responsiveness */
+  max-width: 350px; /* Added max-width to prevent cards from becoming too wide */
+  background-color: #b7d6fb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px; /* Center image vertically */
+}
+
+.img img {
+  width: 40px;
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.today {
+  display: flex;
+  justify-content: center;
+  color: #00ff00;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+.today-red {
+  display: flex;
+  justify-content: center;
+  color: #dc0c0c;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+.today-red-2{
+  display: flex;
+  justify-content: center;
+  color: #dc0c0c;
+  font-size: 1rem;
+  align-items: center;
+}
+.followers {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.followers-2 {
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  align-items: center;
+}
+.sub-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4px;
+  font-size: 1rem;
+}
+.gradient-line {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+.numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4px;
+  font-size: 1rem;
+}
+.today-2 {
+  display: flex;
+  justify-content: center;
+  color: #00ff00;
+  font-size: 1rem;
+  align-items: center;
+}
+/* Media queries for responsiveness */
+@media screen and (min-width: 600px) {
+  .main-card,
+  .second-card {
+    width: calc(50% - 16px); /* Two cards per row with margin */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-card,
+  .second-card {
+    width: calc(33.33% - 16px); /* Three cards per row with margin */
+  }
+}
